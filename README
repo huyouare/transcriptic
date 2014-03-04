@@ -1,0 +1,88 @@
+ 
+ 
+    Genensis
+    ___  ____  ____      ___   ___    ___    ___  
+   / __)(_  _)(  _ \ ___(__ ) / _ \  / _ \  / _ \ 
+  ( (__   )(   )___/(___)(_ \( (_) )( (_) )( (_) )
+   \___) (__) (__)      (___/ \___/  \___/  \___/ 
+
+
+====  OPERATING MANUAL  ===================================
+
+----  1. Requirements  ------------------------------------
+
+The Genensis software is provided in the form of a 32-bit
+Linux executable. If you do not have easy access to a 32-bit
+Linux installation, Genensis recommends Vagrant[1]. The
+standard precise32 image is compatible with the Genensis
+CTP-3000 software.
+
+[1]: Call 510-VAGRANTUP.COM for more information.
+
+
+---- 2. Operation  ----------------------------------------
+
+You can analyze a sample stored in a file on your computer
+by running the following command:
+
+  $ ./ctp3k SAMPLE13.DAT
+
+The sample will be loaded into the CTP-3000 and analyzed at
+our remote testing facility. The optical density of your
+sample will be calculated and printed in the terminal for
+your convenience.
+
+The default operating wavelength is 600nm. To specify an
+alternative wavelength, pass the -w option to ctp3k:
+
+  $ ./ctp3k -w 540 SAMPLE13.DAT
+
+The default number of flashes is 5. To specify an
+alternative number of flashes, pass the -n option to ctp3k:
+
+  $ ./ctp3k -n 3 SAMPLE13.DAT
+
+The two options -w and -n can be combined:
+
+  $ ./ctp3k -w 540 -n 3 SAMPLE13.DAT
+
+
+---- 3. Calibration  --------------------------------------
+
+Some calibration samples are included with this version of
+the Genensis CTP-3000 software. To ensure your CTP-3000
+software is functioning correctly, please run these samples
+and check that the values given match those in the table
+below.
+
+  +-------------+------------+---------------+
+  | Sample Name | Wavelength | OD (±10%)     |
+  +-------------+------------+---------------+
+  | SAMPLE13    | 280nm      | 0.4402        |
+  +-------------+------------+---------------+
+  | SAMPLE13    | 360nm      | 0.4422        |
+  +-------------+------------+---------------+
+  | SAMPLE13    | 440nm      | 0.4925        |
+  +-------------+------------+---------------+
+  | SAMPLE13    | 520nm      | 0.6536        |
+  +-------------+------------+---------------+
+  | SAMPLE13    | 600nm      | 1.3321        |
+  +-------------+------------+---------------+
+  | SAMPLE14    | 490nm      | 2.0527        |
+  +-------------+------------+---------------+
+  | SAMPLE14    | 520nm      | 1.6011        |
+  +-------------+------------+---------------+
+  | SAMPLE16    | 600nm      | 2.3278        |
+  +-------------+------------+---------------+
+
+
+---- 4. Troubleshooting  ----------------------------------
+
+Our engineers have reported that sometimes the Genensis
+CTP-3000 software experiences a Segment Nation Volt error.
+At the present time, we are unable to locate the cause of
+this error. If you experience this error while using the
+Genensis CTP-3000 software, please check that your machine
+is plugged into the correct voltage and try submitting your
+sample again. If the error persists, please return your
+machine for service.
